@@ -1,5 +1,8 @@
 ---
-- name: Install the latest version of NTP
+- name: Include OS specific variables
+  include_vars: "os_{{ ansible_os_family }}.yml"
+
+- name: Remove chrony client package from the system
   package:
-    name: ntp
-    state: latest    
+    name: chrony
+    state: absent
