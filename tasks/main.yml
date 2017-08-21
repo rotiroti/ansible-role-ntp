@@ -6,3 +6,8 @@
   package:
     name: chrony
     state: absent
+
+- name: Ensure NTP is at the latest version
+  package:
+    name: ntp
+    state: latest
