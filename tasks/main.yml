@@ -11,3 +11,9 @@
   package:
     name: ntp
     state: latest
+
+- name: Ensure NTP is running and enabled as configured
+  service:
+    name: "{{ ntp_daemon }}"
+    state: started
+    enabled: yes
