@@ -1,0 +1,5 @@
+---
+- name: Install the latest version of NTP
+  package:
+    name: ntp
+    state: latest    
